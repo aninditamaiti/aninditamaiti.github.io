@@ -11,6 +11,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.research-tabs { margin-bottom: 1.5rem; }
+			.research-tabs button { margin: 0 0.5rem 0.5rem 0; white-space: normal; height: auto; line-height: 1.4; padding: 0.6rem 1.25rem; }
+			.research-panel { display: none; }
+			.research-panel.active { display: block; }
+			.research-panel details { border-bottom: solid 1px rgba(255,255,255,0.35); padding: 0.75rem 0; }
+			.research-panel summary { cursor: pointer; font-weight: 600; }
+			.research-panel details p { margin: 0.75rem 0 0 0; }
+		</style>
 		<meta name="google-site-verification" content="bcYG-SbzU_lljFGNRc5Y-JmF1DJth_0dnYB6KxjpzgM" />
 		
 	</head>
@@ -57,14 +66,14 @@
 									since August 2026. </p>
 
 								<p>I leverage Theoretical Physics + Computational Statistics to mathematically model Artificial 
-									Intelligence -- focusing particularly on Mechanistic Interepretability (MI), Uncertainty Quantification 
+									Intelligence -- focusing particularly on Mechanistic Interpretability (MI), Uncertainty Quantification 
 									(UQ), and Safety. Additionally, I wear a Physicist hat, wherein, I apply AI to model and simulate Quantum, across
 									the domains of Theoretical Particle Physics and Quantum Matter. You can see my publication list at 
 									<a href="https://scholar.google.com/citations?user=I_32R-EAAAAJ&hl=en">Google Scholar</a>.
 				
 								</p>
 
-								<p>I am actively looking for motivated PhD, Masters and senior Undegrad students to join my group. 
+								<p>I am actively looking for motivated PhD, Masters and senior Undergrad students to join my group. 
 									Please feel free to reach out if my work resonates with you. 
 
 								</p>
@@ -130,38 +139,93 @@
 						<!-- Research -->
 							<article id="research">
 								<h2 class="major">Research</h2>
-								<p> Details to be refreshed. </p>
-								
-								
+
+								<!-- Tab buttons -->
+								<div class="research-tabs">
+									<button type="button" class="primary" onclick="showResearchTab('phys-for-ai', this)">Physics and Math for AI</button>
+									<button type="button" onclick="showResearchTab('ai-for-phys', this)">AI for Physics</button>
+								</div>
+
+								<!-- ===== Tab 1: Physics and Math for AI ===== -->
+								<div id="phys-for-ai" class="research-panel active">
+
+									<details>
+										<summary>Mechanistic Interpretability</summary>
+										<p>Ask the 'how' and 'why' of AI blackboxes. Methods from 
+											statistical and quantum field theory, including Feynman's path integral formalism, Renormalization
+											Group flow, Random Matrix Theory etc. are leveraged. Through this umbrella of Mechanistic Interpretability,
+											behaviours of Generative and non-Generative AI, including scaling laws and memorization-to-generalization 
+											transitions are interpreted and explained.
+										</p>
+									</details>
+
+									<details>
+										<summary>Uncertainty Quantification & Robustness</summary>
+										<p>Systematic transformations in uncertainty of AI outputs, as function(s) of variations in architecture details, 
+											dataset size,
+											and feature resolutions are studied and modeled using mathematical physics. This sheds
+											light on how changes in the feature resolution scale can alter the quality of AI predictions, 
+											especially beyond the scope of traditional Statistical ML.  
+										</p>
+									</details>
+
+									<!-- To add another topic, copy a <details> ... </details> block and paste it here -->
+
+								</div>
+
+								<!-- ===== Tab 2: AI for Physics ===== -->
+								<div id="ai-for-phys" class="research-panel">
+
+									<details>
+										<summary>Neural Network Field Theory Correspondence</summary>
+										<p>I will write this up later. Busy week.</p>
+									</details>
+
+									<details>
+										<summary>Generative AI for Quantum</summary>
+										<p>I will write this up later. Busy week.</p>
+									</details>
+
+									<!-- To add another topic, copy a <details> ... </details> block and paste it here -->
+
+								</div>
+
 							</article>
 
 						<!-- Teaching -->
-						<article id="teaching">
-							<h2 class="major">Teaching</h2>
+							<article id="teaching">
+								<h2 class="major">Teaching</h2>
 
-							<p>As a faculty in IIT Kharagpur.</p>
-							<ul>
-								<li><b>Fall 2026 (post mid-semester exam):</b> <i>Linear Algebra for AI (AI21203)</i> for sophomores.</li>
-							</ul>
-							<p>As a Postdoctoral Fellow at Perimeter & Harvard.</p>
-							<ul>
-								<li><b>Future Horizons: Bridging AI, Quantum and New Materials 2024 Workshop:</b> Lecture and tutorial on 
-									<i>Machine Learning from a Physicist’s Perspective</i></li>
-								<li><b>The NSF IAIFI Summer School 2023:</b> Tutorial Lead on 
-									<i>'Normalizing Flows for Lattice Field Theory' lectures by Miranda Cheng</i></li>
-							</ul>
-							<!--<p> Fall 2026 (post mid-semester exam): Linear Algebra for AI (AI21203) for sophomores.  </p>-->
-							
+								<p>As a faculty in IIT Kharagpur.</p>
+								<ul>
+									<li><b>Fall 2026 (post mid-term exam):</b> <i>Linear Algebra for AI (AI21203)</i> for sophomores.</li>
+									<li><b>Spring 2027:</b> <i>Scientific Machine Learning.</ii></li>
+								</ul>
+								<p>As a Postdoctoral Fellow at Perimeter & Harvard.</p>
+								<ul>
+									<li><b>Future Horizons: Bridging AI, Quantum and New Materials 2024 Workshop:</b> Lecture and tutorial on 
+										<i>Machine Learning from a Physicist’s Perspective</i></li>
+									<li><b>The NSF IAIFI Summer School 2023:</b> Tutorial Lead on 
+										<i>'Normalizing Flows for Lattice Field Theory' lectures by Miranda Cheng</i></li>
+								</ul>
+								<!--<p> Fall 2026 (post mid-semester exam): Linear Algebra for AI (AI21203) for sophomores.  </p>-->
+								
 
-						</article>
+							</article>
 
 						<!-- People: Research Group -->
-						<article id="team">
-							<h2 class="major">People</h2>
-							<p> To be added.  </p>
-							
-							
-						</article>
+							<article id="team">
+								<h2 class="major">People</h2>
+
+								<b>Masters Students</b>
+								<ul>
+									<li><b>Aditya Ashok:</b> <i>(joinly supervised with <a href="https://sites.google.com/site/adwayresearch/">Dr. Adway Mitra)</a></i> working on Bayesian 
+										approaches to model and improve AI Safety.</li>
+								
+								</ul>
+								
+								
+							</article>
 
 
 						<!-- Contact -->
@@ -438,7 +502,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script>
+				function showResearchTab(id, btn) {
+					document.querySelectorAll('.research-panel').forEach(function (p) { p.classList.remove('active'); });
+					document.querySelectorAll('.research-tabs button').forEach(function (b) { b.classList.remove('primary'); });
+					document.getElementById(id).classList.add('active');
+					btn.classList.add('primary');
+				}
+			</script>
 
 	</body>
 </html>
